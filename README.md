@@ -1,3 +1,4 @@
+
 # ddev-vnc
 
 [![tests](https://github.com/thursdaybw/ddev-vnc/actions/workflows/tests.yml/badge.svg)](https://github.com/thursdaybw/ddev-vnc/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
@@ -13,26 +14,45 @@
 - [Acknowledgements](#acknowledgements)
 
 ## What is ddev-vnc?
-`ddev-vnc` is a DDEV add-on that provides VNC (Virtual Network Computing) capabilities for DDEV projects. This allows developers to access a graphical desktop environment within their DDEV containers.
+`ddev-vnc` is a DDEV add-on that provides VNC (Virtual Network Computing) capabilities for DDEV projects. This allows developers to access a graphical desktop environment within their DDEV containers. The primary motivation for this add-on is to enable developers to visually monitor browsers, such as Chrome, being controlled by automation tools like Puppeteer. However, it is versatile enough to be used for any purpose requiring a graphical interface within a DDEV container.
+
+### Key Features:
+- **Monitor Headless Browsers**: Ideal for witnessing Chrome being controlled by Puppeteer.
+- **Graphical Interface**: Access a minimal graphical desktop environment.
+- **Simple Setup**: Easy to install and configure within any DDEV project.
 
 ## Installation
 ### Using `ddev get`
+To install `ddev-vnc`, use the following commands:
 ```bash
 ddev get thursdaybw/ddev-vnc
-ddev restart 
+ddev restart
 ```
 
 ### Accessing the VNC Server
-- Use a VNC client to connect to `localhost:5901`
-- Enter the password set in the configuration
+1. Use a VNC client to connect to `localhost:5901`
+2. Enter 'password' which has been preset during configuration. 
+
+### Example Usage
+To visually monitor Puppeteer controlling Chrome, follow these steps:
+1. Ensure your Puppeteer script is set up to run in a non-headless mode.
+2. Start your DDEV project and ensure the VNC server is running.
+3. Connect to the VNC server using a VNC client to watch the automation in action.
 
 ## Testing
 ### Running Tests Locally
+To run tests locally, use:
 ```bash
 bats ./tests/test.bats
 ```
+
 ### Running Tests in GitHub Actions
-- Tests are automatically run on push and pull request events.
+Tests are automatically run on push and pull request events.
+
+## Debugging
+If you encounter any issues, check the logs for the VNC server and your DDEV project. Logs can be found in the following locations:
+- VNC server logs: `/var/log/supervisor/start-vnc.log` and `/var/log/supervisor/start-vnc_err.log`
+- DDEV project logs: As configured in your DDEV setup
 
 ## Contributing
 We welcome contributions! Please see our [contributing guidelines](CONTRIBUTING.md) for more details.
