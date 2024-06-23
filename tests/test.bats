@@ -36,8 +36,8 @@ teardown() {
 @test "install from release" {
   set -eu -o pipefail
   cd ${TESTDIR} || ( printf "unable to cd to ${TESTDIR}\n" && exit 1 )
-  echo "# ddev get ddev/ddev-ddev-vnc with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
-  ddev get ddev/ddev-ddev-vnc
+  echo "# ddev get thursdaybw/ddev-vnc with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  ddev get thursdaybw/ddev-vnc
   ddev restart >/dev/null
   health_checks
 }
