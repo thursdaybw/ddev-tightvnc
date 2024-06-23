@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Starting VNC server setup..."
 
-VNC_DIR="/home/bevan/.vnc"
+VNC_DIR="${HOME}/.vnc"
 mkdir -p ${VNC_DIR}
 echo "Created .vnc directory"
 

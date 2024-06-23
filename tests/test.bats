@@ -12,9 +12,8 @@ setup() {
 }
 
 health_checks() {
-  # Do something useful here that verifies the add-on
-  # ddev exec "curl -s elasticsearch:9200" | grep "${PROJNAME}-elasticsearch"
-  ddev exec "curl -s https://localhost:443/"
+ # Check that the Xvnc process is running in ddev
+ ddev exec "pgrep -f Xvnc"
 }
 
 teardown() {
