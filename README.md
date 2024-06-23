@@ -30,8 +30,19 @@ ddev restart
 ```
 
 ### Accessing the VNC Server
-1. Use a VNC client to connect to `localhost:5901`
+1. Use a VNC client to connect to `localhost:5901`; For example `vncviewer localhost:5901`
 2. Enter 'password' which has been preset during configuration. 
+
+### Accessing the VNC Server
+1. Use a VNC client to connect to `localhost:5901`; For example `vncviewer localhost:5901`
+2. Enter 'password' which has been preset during configuration. 
+
+#### To connect using TigerVNC client without having to enter a password:
+```
+mkdir -p "~/.vnc"
+echo "password" | vncpasswd -f > "${VNC_DIR}/passwd
+vncviewer -passwd "~/.vnc/passwd" localhost:5901
+```
 
 ### Example Usage
 To visually monitor Puppeteer controlling Chrome, follow these steps:
