@@ -19,13 +19,9 @@
 ### Using `ddev get`
 ```bash
 ddev get thursdaybw/ddev-vnc
+ddev restart 
 ```
 
-## Usage
-### Starting the VNC Server
-```bash
-ddev start
-```
 ### Accessing the VNC Server
 - Use a VNC client to connect to `localhost:5901`
 - Enter the password set in the configuration
@@ -37,16 +33,6 @@ bats ./tests/test.bats
 ```
 ### Running Tests in GitHub Actions
 - Tests are automatically run on push and pull request events.
-
-## Debugging
-### Using Logs
-- Check the VNC server logs for issues
-```bash
-ddev logs vnc
-```
-### Common Issues and Solutions
-- Issue: Unable to connect to VNC server
-  - Solution: Ensure the VNC server is running and the ports are correctly configured.
 
 ## Contributing
 We welcome contributions! Please see our [contributing guidelines](CONTRIBUTING.md) for more details.
