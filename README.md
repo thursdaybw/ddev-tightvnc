@@ -54,9 +54,6 @@ If you encounter any issues, check the logs for the VNC server and your DDEV pro
 - VNC server logs: `/var/log/supervisor/start-vnc.log` and `/var/log/supervisor/start-vnc_err.log`
 - DDEV project logs: As configured in your DDEV setup
 
-## Contributing
-We welcome contributions! Please see our [contributing guidelines](CONTRIBUTING.md) for more details.
-
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
