@@ -1,10 +1,10 @@
 
 # ddev-tightvnc
 
-[![tests](https://github.com/thursdaybw/ddev-vnc/actions/workflows/tests.yml/badge.svg)](https://github.com/thursdaybw/ddev-vnc/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
+[![tests](https://github.com/thursdaybw/ddev-tightvnc/actions/workflows/tests.yml/badge.svg)](https://github.com/thursdaybw/ddev-tightvnc/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
 
 ## Table of Contents
-- [What is ddev-vnc?](#what-is-ddev-vnc)
+- [What is ddev-tightvnc?](#what-is-ddev-tightvnc)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Testing](#testing)
@@ -13,8 +13,8 @@
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
-## What is ddev-vnc?
-`ddev-vnc` is a DDEV add-on that provides VNC (Virtual Network Computing) capabilities for DDEV projects via tightvncserver. This allows developers to access a graphical desktop environment within their DDEV containers. The primary motivation for this add-on is to enable developers to visually monitor browsers, such as Chrome, being controlled by automation tools like Puppeteer. However, it is versatile enough to be used for any purpose requiring a graphical interface within a DDEV container.
+## What is ddev-tightvnc?
+`ddev-tightvnc` is a DDEV add-on that provides VNC (Virtual Network Computing) capabilities for DDEV projects via tightvncserver. This allows developers to access a graphical desktop environment within their DDEV containers. The primary motivation for this add-on is to enable developers to visually monitor browsers, such as Chrome, being controlled by automation tools like Puppeteer. However, it is versatile enough to be used for any purpose requiring a graphical interface within a DDEV container.
 
 ### Key Features:
 - **Monitor Headless Browsers**: Ideal for witnessing Chrome being controlled by Puppeteer.
@@ -23,9 +23,9 @@
 
 ## Installation
 ### Using `ddev get`
-To install `ddev-vnc`, use the following commands:
+To install `ddev-tightvnc`, use the following commands:
 ```bash
-ddev get thursdaybw/ddev-vnc
+ddev get thursdaybw/ddev-tightvnc
 ddev restart
 ```
 
