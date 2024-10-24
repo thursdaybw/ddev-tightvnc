@@ -24,8 +24,22 @@
 ## Installation
 ### Using `ddev get`
 To install `ddev-tightvnc`, use the following commands:
+
+For DDEV v1.23.5 or above run
+
+```bash
+ddev add-on get thursdaybw/ddev-tightvnc
+```
+
+For earlier versions of DDEV run
+
 ```bash
 ddev get thursdaybw/ddev-tightvnc
+```
+
+Then restart your project
+
+```bash
 ddev restart
 ```
 
